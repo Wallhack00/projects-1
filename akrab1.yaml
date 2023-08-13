@@ -1,0 +1,89 @@
+proxies:
+  - name: akun1
+    server: id-1.0rd.net
+    port: 443
+    type: vmess
+    uuid: e49dbad0-3956-11ee-b335-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: meet.skype.com
+    network: ws
+    ws-opts:
+      path: /8fq9i05v
+      headers:
+        Host: meet.skype.com
+    udp: true
+  - name: akun2
+    server: id-1.test3.net
+    port: 443
+    type: trojan
+    password: 382fa560-396a-11ee-8bea-1239d0255272
+    skip-cert-verify: true
+    sni: meet.skype.com
+    udp: true
+  - name: akun3
+    server: pc24.vpnjos.live
+    port: 443
+    type: trojan
+    password: 933ae03f-1f63-4698-a29c-eb4d4445d737
+    skip-cert-verify: true
+    sni: meet.skype.com
+    network: ws
+    ws-opts:
+      path: /trojan
+      headers:
+        Host: pc24.vpnjos.live
+    udp: true
+  - name: akun4
+    server: idtcp.mainssh.xyz
+    port: 443
+    type: trojan
+    password: mainssh-rhofiik
+    skip-cert-verify: true
+    sni: meet.skype.com
+    udp: true
+proxy-groups:
+  - name: CLASH
+    type: select
+    proxies:
+      - DIRECT
+      - LOAD-BALANCE
+      - BEST-PING
+      - FALLBACK
+      - akun1
+      - akun2
+      - akun3
+      - akun4
+  - name: LOAD-BALANCE
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - akun1
+      - akun2
+      - akun3
+      - akun4
+  - name: BEST-PING
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - akun1
+      - akun2
+      - akun3
+      - akun4
+  - name: FALLBACK
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - akun1
+      - akun2
+      - akun3
+      - akun4
+rules:
+  - MATCH,CLASH
