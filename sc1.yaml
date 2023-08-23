@@ -62,8 +62,6 @@ proxy-groups:
   proxies:
   - DIRECT
   - REJECT
-  use:
-  - iklan
 
 proxy-providers:
   AKUN:
