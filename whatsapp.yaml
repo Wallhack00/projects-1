@@ -1,0 +1,7 @@
+payload:
+- PROCESS-NAME,com.whatsapp
+- DST-PORT,3478
+- DOMAIN-KEYWORD,whatsapp
+- DOMAIN-KEYWORD,wa.me
+- IP-CIDR,66.111.48.0/22
+- IP-CIDR6,2620:13e:1000::/44
