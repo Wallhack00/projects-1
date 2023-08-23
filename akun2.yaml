@@ -1,0 +1,73 @@
+proxies:
+  - name: akun1
+    server: vmess-bn-id01.globalssh.xyz
+    port: 443
+    type: vmess
+    uuid: 7a8b210e-0a19-4fab-b0d2-fdde4e46741f
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: do.skype.com
+    network: ws
+    ws-opts:
+      path: /vmess-ws
+      headers:
+        Host: vmess-bn-id01.globalssh.xyz
+    udp: true
+  - name: akun2
+    server: vmess-ikd-id01.globalssh.xyz
+    port: 443
+    type: vmess
+    uuid: eb1e9e40-21c8-4b61-bf53-ccc65c61ebdd
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: do.skype.com
+    network: ws
+    ws-opts:
+      path: /vmess-ws
+      headers:
+        Host: vmess-ikd-id01.globalssh.xyz
+    udp: true
+  - name: akun3
+    server: vmess-uas-id01.globalssh.xyz
+    port: 443
+    type: vmess
+    uuid: 8918f69c-ea5b-44a2-a430-7bdbe656393c
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: do.skype.com
+    network: ws
+    ws-opts:
+      path: /vmess-ws
+      headers:
+        Host: vmess-uas-id01.globalssh.xyz
+    udp: true
+  - name: akun4
+    server: trojan-bn-id01.globalssh.xyz
+    port: 443
+    type: trojan
+    password: aaaaaa
+    skip-cert-verify: true
+    sni: do.skype.com
+    udp: true
+  - name: akun5
+    server: trojan-ikd-id01.globalssh.xyz
+    port: 443
+    type: trojan
+    password: aaaaaa
+    skip-cert-verify: true
+    sni: do.skype.com
+    udp: true
+  - name: akun6
+    server: trojan-uas-id01.globalssh.xyz
+    port: 443
+    type: trojan
+    password: aaaaaa
+    skip-cert-verify: true
+    sni: do.skype.com
+    udp: true

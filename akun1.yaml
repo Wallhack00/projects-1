@@ -1,0 +1,54 @@
+proxies:
+  - name: akun1
+    server: idtcp.mainssh.xyz
+    port: 443
+    type: trojan
+    password: mainssh-isrofiahdwii
+    skip-cert-verify: true
+    sni: do.skype.com
+    udp: true
+  - name: akun2
+    server: idtws.mainssh.xyz
+    port: 443
+    type: trojan
+    password: mainssh-isrofiahdwiiii
+    skip-cert-verify: true
+    sni: do.skype.com
+    network: ws
+    ws-opts:
+      path: /trojan
+      headers:
+        Host: idtws.mainssh.xyz
+    udp: true
+  - name: akun3
+    server: idmws.mainssh.xyz
+    port: 443
+    type: vmess
+    uuid: 5634078d-cc5e-419c-b887-25c78a92eeed
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: do.skype.com
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: idmws.mainssh.xyz
+    udp: true
+  - name: akun4
+    server: idray.serverip.my.id
+    port: 443
+    type: vmess
+    uuid: 7fd9c519-0f5a-4af8-812e-2fc4ff4d43ca
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: do.skype.com
+    network: ws
+    ws-opts:
+      path: /serverssh.net
+      headers:
+        Host: idray.serverip.my.id
+    udp: true
