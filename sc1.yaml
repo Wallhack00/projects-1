@@ -56,12 +56,6 @@ proxy-groups:
   - AKUN
   url: https://cp.cloudflare.com/generate_204
   interval: '300'
-  
-- name: IKLAN
-  type: select
-  proxies:
-  - DIRECT
-  - REJECT
 
 proxy-providers:
   AKUN:
@@ -152,14 +146,8 @@ proxy-providers:
     url: https://raw.githubusercontent.com/Wallhack00/projects-1/main/webdownload.yaml
     behavior: classical
     path: ./webdownload.yaml
-  iklan:
-    type: http
-    behavior: domain
-    url: https://howdy.id/download/rules/clash.txt
-    path: ./iklan.yaml
-    interval: 86400
+    
 rules:
-- RULE-SET,iklan,REJECT
 - DST-PORT,5228,CLASH
 - RULE-SET,PROVIDERS,CLASH
 - RULE-SET,WHATSAPP,CLASH
