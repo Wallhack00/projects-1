@@ -40,25 +40,25 @@ proxy-groups:
   - BALANCE
   - AutoReverse
   use:
-  - AKUN
+  - Akun
 - name: BALANCE
   type: load-balance
   strategy: round-robin
   disable-udp: false
   use:
-  - AKUN
+  - Akun
   url: http://www.gstatic.com/generate_204
   interval: 99
 - name: AutoReverse
   type: fallback
   disable-udp: false
   use:
-  - AKUN
+  - Akun
   url: https://cp.cloudflare.com/generate_204
   interval: '300'
 
 proxy-providers:
-  AKUN:
+  Akun:
     type: http
     path: "./akun.yaml"
     url: https://raw.githubusercontent.com/Wallhack00/projects-1/main/akun1.yaml
