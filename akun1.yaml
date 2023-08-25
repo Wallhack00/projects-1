@@ -1,30 +1,9 @@
 proxies:
   - name: akun1
-    server: idtcp.mainssh.xyz
-    port: 443
-    type: trojan
-    password: mainssh-isrofiahdwii
-    skip-cert-verify: true
-    sni: do.skype.com
-    udp: true
-  - name: akun2
-    server: idtws.mainssh.xyz
-    port: 443
-    type: trojan
-    password: mainssh-isrofiahdwiiii
-    skip-cert-verify: true
-    sni: do.skype.com
-    network: ws
-    ws-opts:
-      path: /trojan
-      headers:
-        Host: idtws.mainssh.xyz
-    udp: true
-  - name: akun3
-    server: idmws.mainssh.xyz
+    server: id1-vmess.greenssh.xyz
     port: 443
     type: vmess
-    uuid: 5634078d-cc5e-419c-b887-25c78a92eeed
+    uuid: efa12608-6f24-4ccd-a4dd-86193957b6e5
     alterId: 0
     cipher: auto
     tls: true
@@ -34,13 +13,13 @@ proxies:
     ws-opts:
       path: /vmess
       headers:
-        Host: idmws.mainssh.xyz
+        Host: id1-vmess.greenssh.xyz
     udp: true
-  - name: akun4
+  - name: akun2
     server: idray.serverip.my.id
     port: 443
     type: vmess
-    uuid: 7fd9c519-0f5a-4af8-812e-2fc4ff4d43ca
+    uuid: 37a4fee6-820e-4a2d-ac9f-9010550d543b
     alterId: 0
     cipher: auto
     tls: true
@@ -51,4 +30,41 @@ proxies:
       path: /serverssh.net
       headers:
         Host: idray.serverip.my.id
+    udp: true
+  - name: akun3
+    server: idtcp.mainssh.xyz
+    port: 443
+    type: trojan
+    password: mainssh-millowwwwww
+    skip-cert-verify: true
+    sni: do.skype.com
+    udp: true
+  - name: akun4
+    server: idtws.mainssh.xyz
+    port: 443
+    type: trojan
+    password: mainssh-jfkfkfndjdjfkf
+    skip-cert-verify: true
+    sni: do.skype.com
+    network: ws
+    ws-opts:
+      path: /trojan
+      headers:
+        Host: idtws.mainssh.xyz
+    udp: true
+  - name: akun5
+    server: idmws.mainssh.xyz
+    port: 443
+    type: vmess
+    uuid: caca7494-b47f-4ab5-ae03-4afbbeebbc83
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: do.skype.com
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: idmws.mainssh.xyz
     udp: true
