@@ -8,7 +8,7 @@ mode: rule
 log-level: silent
 allow-lan: true
 external-controller: 0.0.0.0:9090
-secret: ""
+secret: "ropi"
 bind-address: "*"
 unified-delay: true
 profile:
@@ -32,6 +32,15 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
+proxy-providers:
+  Akun:
+    type: http
+    path: "./akun.yaml"
+    url: https://raw.githubusercontent.com/Wallhack00/projects-1/main/akun1.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 99
 proxy-groups:
 - name: CLASH
   type: select
@@ -56,16 +65,8 @@ proxy-groups:
   - Akun
   url: https://cp.cloudflare.com/generate_204
   interval: '300'
-
-proxy-providers:
-  Akun:
-    type: http
-    path: "./akun.yaml"
-    url: https://raw.githubusercontent.com/Wallhack00/projects-1/main/akun1.yaml
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 99
+  
+rule-providers:
   PROVIDERS:
     type: http
     behavior: classical
@@ -146,7 +147,12 @@ proxy-providers:
     url: https://raw.githubusercontent.com/Wallhack00/projects-1/main/webdownload.yaml
     behavior: classical
     path: ./webdownload.yaml
-    
+  iklan:
+    type: http
+    behavior: domain
+    url: https://howdy.id/download/rules/clash.txt
+    path: ./iklan.yaml
+    interval: 86400
 rules:
 - DST-PORT,5228,CLASH
 - RULE-SET,PROVIDERS,CLASH
@@ -165,4 +171,5 @@ rules:
 - RULE-SET,GAMES,CLASH
 - RULE-SET,INDO,CLASH
 - RULE-SET,Web-download,CLASH
+- RULE-SET,iklan,REJECT
 - MATCH,CLASH
