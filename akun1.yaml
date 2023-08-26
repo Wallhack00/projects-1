@@ -80,7 +80,7 @@ proxies:
     server: idmws.mainssh.xyz
     port: 443
     type: vmess
-    uuid: caca7494-b47f-4ab5-ae03-4afbbeebbc83
+    uuid: 5634078d-cc5e-419c-b887-25c78a92eeed
     alterId: 0
     cipher: auto
     tls: true
@@ -90,5 +90,5 @@ proxies:
     ws-opts:
       path: /vmess
       headers:
-        Host: do.skype.com
+        Host: idmws.mainssh.xyz
     udp: true
