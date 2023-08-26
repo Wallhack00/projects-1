@@ -1,5 +1,29 @@
 proxies:
   - name: akun1
+    server: id-1.0rd.net
+    port: 443
+    type: vmess
+    uuid: 155a0760-446a-11ee-b839-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: do.skype.com
+    network: ws
+    ws-opts:
+      path: /yrb1vsfi
+      headers:
+        Host: do.skype.com
+    udp: true
+  - name: akun2
+    server: id-1.test3.net
+    port: 443
+    type: trojan
+    password: a3d5e1f0-446a-11ee-bc28-1239d0255272
+    skip-cert-verify: true
+    sni: do.skype.com
+    udp: true
+  - name: akun3
     server: id1-vmess.greenssh.xyz
     port: 443
     type: vmess
@@ -15,7 +39,7 @@ proxies:
       headers:
         Host: id1-vmess.greenssh.xyz
     udp: true
-  - name: akun2
+  - name: akun4
     server: idray.serverip.my.id
     port: 443
     type: vmess
@@ -31,7 +55,7 @@ proxies:
       headers:
         Host: idray.serverip.my.id
     udp: true
-  - name: akun3
+  - name: akun5
     server: idtcp.mainssh.xyz
     port: 443
     type: trojan
@@ -39,7 +63,7 @@ proxies:
     skip-cert-verify: true
     sni: do.skype.com
     udp: true
-  - name: akun4
+  - name: akun6
     server: idtws.mainssh.xyz
     port: 443
     type: trojan
@@ -52,7 +76,7 @@ proxies:
       headers:
         Host: idtws.mainssh.xyz
     udp: true
-  - name: akun5
+  - name: akun7
     server: idmws.mainssh.xyz
     port: 443
     type: vmess
@@ -66,5 +90,5 @@ proxies:
     ws-opts:
       path: /vmess
       headers:
-        Host: idmws.mainssh.xyz
+        Host: do.skype.com
     udp: true
