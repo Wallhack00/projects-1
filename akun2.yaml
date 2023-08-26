@@ -1,9 +1,9 @@
 proxies:
   - name: akun1
-    server: vmess-bn-id01.globalssh.xyz
-    port: 443
+    server: indo.vpnjantit.com
+    port: 10001
     type: vmess
-    uuid: 7a8b210e-0a19-4fab-b0d2-fdde4e46741f
+    uuid: 551f1526-4426-11ee-a4e5-00163cf2e234
     alterId: 0
     cipher: auto
     tls: true
@@ -11,25 +11,31 @@ proxies:
     servername: do.skype.com
     network: ws
     ws-opts:
-      path: /vmess-ws
+      path: /vpnjantit
       headers:
-        Host: vmess-bn-id01.globalssh.xyz
+        Host: do.skype.com
     udp: true
-    
   - name: akun2
-    server: trojan-bn-id01.globalssh.xyz
+    server: indo2.vpnjantit.com
     port: 443
-    type: trojan
-    password: aaaaaa
+    type: vmess
+    uuid: 6853044a-4426-11ee-b8b7-00163e01c0eb
+    alterId: 0
+    cipher: auto
+    tls: true
     skip-cert-verify: true
-    sni: do.skype.com
+    servername: do.skype.com
+    network: ws
+    ws-opts:
+      path: /vpnjantit
+      headers:
+        Host: do.skype.com
     udp: true
-    
   - name: akun3
-    server: vmess-ikd-id01.globalssh.xyz
+    server: indo3.vpnjantit.com
     port: 443
     type: vmess
-    uuid: eb1e9e40-21c8-4b61-bf53-ccc65c61ebdd
+    uuid: ae4a8158-4426-11ee-8afd-00163c31c501
     alterId: 0
     cipher: auto
     tls: true
@@ -37,25 +43,15 @@ proxies:
     servername: do.skype.com
     network: ws
     ws-opts:
-      path: /vmess-ws
+      path: /vpnjantit
       headers:
-        Host: vmess-ikd-id01.globalssh.xyz
+        Host: do.skype.com
     udp: true
-    
   - name: akun4
-    server: trojan-ikd-id01.globalssh.xyz
-    port: 443
-    type: trojan
-    password: aaaaaa
-    skip-cert-verify: true
-    sni: do.skype.com
-    udp: true
-    
-  - name: akun5
-    server: vmess-uas-id01.globalssh.xyz
+    server: indo5.vpnjantit.com
     port: 443
     type: vmess
-    uuid: 8918f69c-ea5b-44a2-a430-7bdbe656393c
+    uuid: d5900e80-4427-11ee-b54f-00163e870a9c
     alterId: 0
     cipher: auto
     tls: true
@@ -63,16 +59,23 @@ proxies:
     servername: do.skype.com
     network: ws
     ws-opts:
-      path: /vmess-ws
+      path: /vpnjantit
       headers:
-        Host: vmess-uas-id01.globalssh.xyz
+        Host: do.skype.com
     udp: true
-    
-  - name: akun6
-    server: trojan-uas-id01.globalssh.xyz
+  - name: akun5
+    server: indo7.vpnjantit.com
     port: 443
-    type: trojan
-    password: aaaaaa
+    type: vmess
+    uuid: 0fbd08d8-4428-11ee-b4b9-67f8f097a4b0
+    alterId: 0
+    cipher: auto
+    tls: true
     skip-cert-verify: true
-    sni: do.skype.com
+    servername: do.skype.com
+    network: ws
+    ws-opts:
+      path: /vpnjantit
+      headers:
+        Host: do.skype.com
     udp: true
