@@ -76,19 +76,3 @@ proxies:
       headers:
         Host: idtws.mainssh.xyz
     udp: true
-  - name: akun7
-    server: idmws.mainssh.xyz
-    port: 443
-    type: vmess
-    uuid: 5634078d-cc5e-419c-b887-25c78a92eeed
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: do.skype.com
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: idmws.mainssh.xyz
-    udp: true
