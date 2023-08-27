@@ -8,6 +8,7 @@ proxies:
     skip-cert-verify: true
     sni: do.skype.com
     udp: true
+    
   - name: akun2
     server: trojan-ikd-id01.globalssh.xyz
     port: 443
@@ -16,6 +17,7 @@ proxies:
     skip-cert-verify: true
     sni: do.skype.com
     udp: true
+    
   - name: akun3
     server: trojan-uas-id01.globalssh.xyz
     port: 443
