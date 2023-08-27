@@ -6,7 +6,7 @@ proxies:
     type: trojan
     password: aaaaaa
     skip-cert-verify: true
-    sni: do.skype.comyz
+    sni: do.skype.com
     udp: true
   - name: akun2
     server: trojan-ikd-id01.globalssh.xyz
