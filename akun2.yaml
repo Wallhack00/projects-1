@@ -1,81 +1,26 @@
+mode: global
 proxies:
   - name: akun1
-    server: indo.vpnjantit.com
-    port: 10001
-    type: vmess
-    uuid: 551f1526-4426-11ee-a4e5-00163cf2e234
-    alterId: 0
-    cipher: auto
-    tls: true
+    server: trojan-bn-id01.globalssh.xyz
+    port: 443
+    type: trojan
+    password: aaaaaa
     skip-cert-verify: true
-    servername: do.skype.com
-    network: ws
-    ws-opts:
-      path: /vpnjantit
-      headers:
-        Host: do.skype.com
+    sni: do.skype.comyz
     udp: true
   - name: akun2
-    server: indo2.vpnjantit.com
+    server: trojan-ikd-id01.globalssh.xyz
     port: 443
-    type: vmess
-    uuid: 6853044a-4426-11ee-b8b7-00163e01c0eb
-    alterId: 0
-    cipher: auto
-    tls: true
+    type: trojan
+    password: aaaaaa
     skip-cert-verify: true
-    servername: do.skype.com
-    network: ws
-    ws-opts:
-      path: /vpnjantit
-      headers:
-        Host: do.skype.com
+    sni: do.skype.com
     udp: true
   - name: akun3
-    server: indo3.vpnjantit.com
+    server: trojan-uas-id01.globalssh.xyz
     port: 443
-    type: vmess
-    uuid: ae4a8158-4426-11ee-8afd-00163c31c501
-    alterId: 0
-    cipher: auto
-    tls: true
+    type: trojan
+    password: aaaaaa
     skip-cert-verify: true
-    servername: do.skype.com
-    network: ws
-    ws-opts:
-      path: /vpnjantit
-      headers:
-        Host: do.skype.com
-    udp: true
-  - name: akun4
-    server: indo5.vpnjantit.com
-    port: 443
-    type: vmess
-    uuid: d5900e80-4427-11ee-b54f-00163e870a9c
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: do.skype.com
-    network: ws
-    ws-opts:
-      path: /vpnjantit
-      headers:
-        Host: do.skype.com
-    udp: true
-  - name: akun5
-    server: indo7.vpnjantit.com
-    port: 443
-    type: vmess
-    uuid: 0fbd08d8-4428-11ee-b4b9-67f8f097a4b0
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: do.skype.com
-    network: ws
-    ws-opts:
-      path: /vpnjantit
-      headers:
-        Host: do.skype.com
+    sni: do.skype.com
     udp: true
