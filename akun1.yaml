@@ -1,9 +1,10 @@
+mode: global
 proxies:
   - name: akun1
     server: id-1.0rd.net
     port: 443
     type: vmess
-    uuid: 155a0760-446a-11ee-b839-205c6d5f5d78
+    uuid: 7a0625a0-459c-11ee-b934-205c6d5f5d78
     alterId: 0
     cipher: auto
     tls: true
@@ -11,7 +12,7 @@ proxies:
     servername: do.skype.com
     network: ws
     ws-opts:
-      path: /yrb1vsfi
+      path: /swa05kmo
       headers:
         Host: do.skype.com
     udp: true
