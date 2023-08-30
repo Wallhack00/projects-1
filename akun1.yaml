@@ -82,3 +82,54 @@ proxies:
       headers:
         Host: idtws.mainssh.xyz
     udp: true
+    
+  - name: akun7
+    server: indo2.vpnjantit.com
+    port: 443
+    type: vmess
+    uuid: c5249854-473d-11ee-9b5e-00163e01c0eb
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: do.skype.com
+    network: ws
+    ws-opts:
+      path: /vpnjantit
+      headers:
+        Host: indo2.vpnjantit.com
+    udp: true
+    
+  - name: akun8
+    server: indo3.vpnjantit.com
+    port: 443
+    type: vmess
+    uuid: 1dbea39c-473e-11ee-b452-00163c31c501
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: do.skype.com
+    network: ws
+    ws-opts:
+      path: /vpnjantit
+      headers:
+        Host: indo3.vpnjantit.com
+    udp: true
+    
+  - name: akun9
+    server: indo7.vpnjantit.com
+    port: 443
+    type: vmess
+    uuid: 5389dda2-473e-11ee-aca3-13bc104ca4e5
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: do.skype.com
+    network: ws
+    ws-opts:
+      path: /vpnjantit
+      headers:
+        Host: indo7.vpnjantit.com
+    udp: true
