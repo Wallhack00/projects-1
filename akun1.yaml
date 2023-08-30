@@ -4,7 +4,7 @@ proxies:
     server: id-1.0rd.net
     port: 443
     type: vmess
-    uuid: c9a97570-4715-11ee-b039-205c6d5f5d78
+    uuid: d60fc9e0-472a-11ee-b037-205c6d5f5d78
     alterId: 0
     cipher: auto
     tls: true
@@ -12,7 +12,7 @@ proxies:
     servername: do.skype.com
     network: ws
     ws-opts:
-      path: /jbscn7gx
+      path: /2kuxe3g4
       headers:
         Host: do.skype.com
     udp: true
