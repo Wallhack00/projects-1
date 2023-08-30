@@ -4,7 +4,7 @@ proxies:
     server: id-1.0rd.net
     port: 443
     type: vmess
-    uuid: 7a0625a0-459c-11ee-b934-205c6d5f5d78
+    uuid: c9a97570-4715-11ee-b039-205c6d5f5d78
     alterId: 0
     cipher: auto
     tls: true
@@ -12,10 +12,11 @@ proxies:
     servername: do.skype.com
     network: ws
     ws-opts:
-      path: /swa05kmo
+      path: /jbscn7gx
       headers:
         Host: do.skype.com
     udp: true
+    
   - name: akun2
     server: id-1.test3.net
     port: 443
@@ -24,6 +25,7 @@ proxies:
     skip-cert-verify: true
     sni: do.skype.com
     udp: true
+    
   - name: akun3
     server: id1-vmess.greenssh.xyz
     port: 443
@@ -40,6 +42,7 @@ proxies:
       headers:
         Host: id1-vmess.greenssh.xyz
     udp: true
+    
   - name: akun4
     server: idray.serverip.my.id
     port: 443
@@ -56,6 +59,7 @@ proxies:
       headers:
         Host: idray.serverip.my.id
     udp: true
+    
   - name: akun5
     server: idtcp.mainssh.xyz
     port: 443
@@ -64,6 +68,7 @@ proxies:
     skip-cert-verify: true
     sni: do.skype.com
     udp: true
+    
   - name: akun6
     server: idtws.mainssh.xyz
     port: 443
