@@ -60,7 +60,7 @@ proxies:
         Host: indo3.vpnjantit.com
     udp: true
     
-  - name: akun9
+  - name: akun5
     server: indo7.vpnjantit.com
     port: 443
     type: vmess
