@@ -45,10 +45,10 @@ proxies:
     udp: true
     
   - name: akun4
-    server: indo3.vpnjantit.com
+    server: indo2.vpnjantit.com
     port: 443
     type: vmess
-    uuid: 1dbea39c-473e-11ee-b452-00163c31c501
+    uuid: f60eaa02-48cf-11ee-9d57-00163e01c0eb
     alterId: 0
     cipher: auto
     tls: true
@@ -58,14 +58,14 @@ proxies:
     ws-opts:
       path: /vpnjantit
       headers:
-        Host: indo3.vpnjantit.com
+        Host: do.skype.com
     udp: true
     
   - name: akun5
-    server: indo7.vpnjantit.com
+    server: indo3.vpnjantit.com
     port: 443
     type: vmess
-    uuid: 5389dda2-473e-11ee-aca3-13bc104ca4e5
+    uuid: 525579f8-48d0-11ee-9704-00163c31c501
     alterId: 0
     cipher: auto
     tls: true
@@ -75,5 +75,39 @@ proxies:
     ws-opts:
       path: /vpnjantit
       headers:
-        Host: indo7.vpnjantit.com
+        Host: do.skype.com
+    udp: true
+    
+  - name: akun6
+    server: indo5.vpnjantit.com
+    port: 443
+    type: vmess
+    uuid: 5826bd74-48d0-11ee-998a-00163e870a9c
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: do.skype.com
+    network: ws
+    ws-opts:
+      path: /vpnjantit
+      headers:
+        Host: do.skype.com
+    udp: true
+    
+  - name: akun7
+    server: indo7.vpnjantit.com
+    port: 443
+    type: vmess
+    uuid: da449f24-48d0-11ee-ad5e-dffa9b7325a8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: do.skype.com
+    network: ws
+    ws-opts:
+      path: /vpnjantit
+      headers:
+        Host: do.skype.com
     udp: true
