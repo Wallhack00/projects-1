@@ -1,3 +1,4 @@
+unified-delay: true
 mode: global
 proxies:
   - name: akun1
