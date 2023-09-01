@@ -27,23 +27,6 @@ proxies:
     udp: true
     
   - name: akun3
-    server: id1-vmess.greenssh.xyz
-    port: 443
-    type: vmess
-    uuid: efa12608-6f24-4ccd-a4dd-86193957b6e5
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: do.skype.com
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: id1-vmess.greenssh.xyz
-    udp: true
-    
-  - name: akun4
     server: idray.serverip.my.id
     port: 443
     type: vmess
@@ -60,47 +43,7 @@ proxies:
         Host: idray.serverip.my.id
     udp: true
     
-  - name: akun5
-    server: idtcp.mainssh.xyz
-    port: 443
-    type: trojan
-    password: mainssh-millowwwwww
-    skip-cert-verify: true
-    sni: do.skype.com
-    udp: true
-    
-  - name: akun6
-    server: idtws.mainssh.xyz
-    port: 443
-    type: trojan
-    password: mainssh-jfkfkfndjdjfkf
-    skip-cert-verify: true
-    sni: do.skype.com
-    network: ws
-    ws-opts:
-      path: /trojan
-      headers:
-        Host: idtws.mainssh.xyz
-    udp: true
-    
-  - name: akun7
-    server: indo2.vpnjantit.com
-    port: 443
-    type: vmess
-    uuid: c5249854-473d-11ee-9b5e-00163e01c0eb
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: do.skype.com
-    network: ws
-    ws-opts:
-      path: /vpnjantit
-      headers:
-        Host: indo2.vpnjantit.com
-    udp: true
-    
-  - name: akun8
+  - name: akun4
     server: indo3.vpnjantit.com
     port: 443
     type: vmess
