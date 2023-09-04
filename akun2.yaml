@@ -9,7 +9,7 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: meet.skype.com
+    servername: www.skypeassets.com
     network: ws
     ws-opts:
       path: /vmess-ws
@@ -23,7 +23,7 @@ proxies:
     type: trojan
     password: aaaaaa
     skip-cert-verify: true
-    sni: meet.skype.com
+    sni: www.skypeassets.com
     udp: true
     
   - name: akun3
@@ -35,7 +35,7 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: meet.skype.com
+    servername: www.skypeassets.com
     network: ws
     ws-opts:
       path: /vmess-ws
@@ -49,7 +49,7 @@ proxies:
     type: trojan
     password: aaaaaa
     skip-cert-verify: true
-    sni: meet.skype.com
+    sni: www.skypeassets.com
     udp: true
     
   - name: akun5
@@ -61,7 +61,7 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: meet.skype.com
+    servername: www.skypeassets.com
     network: ws
     ws-opts:
       path: /vmess-ws
@@ -75,5 +75,5 @@ proxies:
     type: trojan
     password: aaaaaa
     skip-cert-verify: true
-    sni: meet.skype.com
+    sni: www.skypeassets.com
     udp: true
