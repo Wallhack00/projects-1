@@ -9,12 +9,12 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: do.skype.com
+    servername: meet.skype.com
     network: ws
     ws-opts:
       path: /l50p9f2x
       headers:
-        Host: do.skype.com
+        Host: meet.skype.com
     udp: true
     
   - name: akun2
@@ -26,12 +26,12 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: do.skype.com
+    servername: meet.skype.com
     network: ws
     ws-opts:
       path: /kb7wqhc0
       headers:
-        Host: do.skype.com
+        Host: meet.skype.com
     udp: true
     
   - name: akun3
@@ -40,7 +40,7 @@ proxies:
     type: trojan
     password: a3d5e1f0-446a-11ee-bc28-1239d0255272
     skip-cert-verify: true
-    sni: do.skype.com
+    sni: meet.skype.com
     udp: true
     
   - name: akun4
@@ -52,12 +52,12 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: do.skype.com
+    servername: meet.skype.com
     network: ws
     ws-opts:
       path: /vpnjantit
       headers:
-        Host: do.skype.com
+        Host: meet.skype.com
     udp: true
     
   - name: akun5
@@ -69,12 +69,12 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: do.skype.com
+    servername: meet.skype.com
     network: ws
     ws-opts:
       path: /vpnjantit
       headers:
-        Host: do.skype.com
+        Host: meet.skype.com
     udp: true
     
   - name: akun6
@@ -86,10 +86,10 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: do.skype.com
+    servername: meet.skype.com
     network: ws
     ws-opts:
       path: /vpnjantit
       headers:
-        Host: do.skype.com
+        Host: meet.skype.com
     udp: true
