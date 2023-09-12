@@ -1,15 +1,15 @@
 mode: global
 proxies:
   - name: akun1
-    server: vmess-bn-id01.globalssh.xyz
+    server: www.skillacademy.com
     port: 443
     type: vmess
-    uuid: 3becb155-4721-4ba9-845a-8ddb4e47a6d5
+    uuid: 0825ccdb-8290-447a-9fc1-85e132717728
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: www.skypeassets.com
+    servername: vmess-bn-id01.globalssh.xyz
     network: ws
     ws-opts:
       path: /vmess-ws
@@ -18,24 +18,32 @@ proxies:
     udp: true
     
   - name: akun2
-    server: trojan-bn-id01.globalssh.xyz
-    port: 443
-    type: trojan
-    password: aaaaaa
-    skip-cert-verify: true
-    sni: www.skypeassets.com
-    udp: true
-    
-  - name: akun3
-    server: vmess-ikd-id01.globalssh.xyz
+    server: www.skillacademy.com
     port: 443
     type: vmess
-    uuid: de9e6e2f-7385-4005-831a-400c3d2c052e
+    uuid: ed22335f-cb5d-4821-a9ca-ea8546086f3f
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: www.skypeassets.com
+    servername: vmess-uas-id01.globalssh.xyz
+    network: ws
+    ws-opts:
+      path: /vmess-ws
+      headers:
+        Host: vmess-uas-id01.globalssh.xyz
+    udp: true
+    
+  - name: akun3
+    server: www.skillacademy.com
+    port: 443
+    type: vmess
+    uuid: 344e97dd-61ea-4ace-b064-984a4be62735
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vmess-ikd-id01.globalssh.xyz
     network: ws
     ws-opts:
       path: /vmess-ws
@@ -44,36 +52,18 @@ proxies:
     udp: true
     
   - name: akun4
-    server: trojan-ikd-id01.globalssh.xyz
-    port: 443
-    type: trojan
-    password: aaaaaa
-    skip-cert-verify: true
-    sni: www.skypeassets.com
-    udp: true
-    
-  - name: akun5
-    server: vmess-uas-id01.globalssh.xyz
+    server: www.skillacademy.com
     port: 443
     type: vmess
-    uuid: 884b2dac-6d17-42b8-9c27-e2acef206c45
+    uuid: bedced80-5107-11ee-b936-205c6d5f5d78
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: www.skypeassets.com
+    servername: id-1.0rd.net
     network: ws
     ws-opts:
-      path: /vmess-ws
+      path: /vhd63q70
       headers:
-        Host: vmess-uas-id01.globalssh.xyz
-    udp: true
-    
-  - name: akun6
-    server: trojan-uas-id01.globalssh.xyz
-    port: 443
-    type: trojan
-    password: aaaaaa
-    skip-cert-verify: true
-    sni: www.skypeassets.com
+        Host: id-1.0rd.net
     udp: true
