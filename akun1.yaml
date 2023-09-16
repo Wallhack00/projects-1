@@ -1,95 +1,52 @@
 mode: global
 proxies:
   - name: akun1
-    server: id-1.0rd.net
+    server: www.skillacademy.com
     port: 443
     type: vmess
-    uuid: 3ecb5d70-4a4a-11ee-b737-205c6d5f5d78
+    uuid: be1cfc70-54ae-11ee-b035-205c6d5f5d78
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: www.skypeassets.com
+    servername: id-1.0rd.net
     network: ws
     ws-opts:
-      path: /l50p9f2x
+      path: /xp4fuiga
       headers:
-        Host: www.skypeassets.com
+        Host: id-1.0rd.net
     udp: true
     
   - name: akun2
-    server: id-1.0rd.net
+    server: www.skillacademy.com
     port: 443
     type: vmess
-    uuid: 59d7c0c0-4a4a-11ee-b537-205c6d5f5d78
-    alterId: 0
+    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+    alterId: 16
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: www.skypeassets.com
+    servername: idv-3.openv2ray.com
     network: ws
     ws-opts:
-      path: /kb7wqhc0
+      path: /opentunnel?user=opentunnel.net-isrofiah
       headers:
-        Host: www.skypeassets.com
+        Host: idv-3.openv2ray.com
     udp: true
     
   - name: akun3
-    server: id-1.test3.net
-    port: 443
-    type: trojan
-    password: a3d5e1f0-446a-11ee-bc28-1239d0255272
-    skip-cert-verify: true
-    sni: www.skypeassets.com
-    udp: true
-    
-  - name: akun4
-    server: indo3.vpnjantit.com
+    server: www.skillacademy.com
     port: 443
     type: vmess
-    uuid: 525579f8-48d0-11ee-9704-00163c31c501
-    alterId: 0
+    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+    alterId: 16
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: www.skypeassets.com
+    servername: idv-1.openv2ray.com
     network: ws
     ws-opts:
-      path: /vpnjantit
+      path: /opentunnel?user=opentunnel.net-geyong
       headers:
-        Host: www.skypeassets.com
-    udp: true
-    
-  - name: akun5
-    server: indo5.vpnjantit.com
-    port: 443
-    type: vmess
-    uuid: 5826bd74-48d0-11ee-998a-00163e870a9c
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: www.skypeassets.com
-    network: ws
-    ws-opts:
-      path: /vpnjantit
-      headers:
-        Host: www.skypeassets.com
-    udp: true
-    
-  - name: akun6
-    server: indo7.vpnjantit.com
-    port: 443
-    type: vmess
-    uuid: da449f24-48d0-11ee-ad5e-dffa9b7325a8
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: www.skypeassets.com
-    network: ws
-    ws-opts:
-      path: /vpnjantit
-      headers:
-        Host: www.skypeassets.com
+        Host: idv-1.openv2ray.com
     udp: true
