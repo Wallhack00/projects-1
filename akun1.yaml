@@ -50,3 +50,54 @@ proxies:
       headers:
         Host: idv-1.openv2ray.com
     udp: true
+
+  - name: akun4
+    server: www.skillacademy.com
+    port: 443
+    type: vmess
+    uuid: afff45f1-313a-44ae-8ebe-2edfb3a40614
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: id2.xv2ray.net
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: id2.xv2ray.net
+    udp: true
+    
+  - name: akun5
+    server: www.skillacademy.com
+    port: 443
+    type: vmess
+    uuid: 8e49bf13-358b-4e4c-aec9-3c63f6911f31
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: id3.xv2ray.net
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: id3.xv2ray.net
+    udp: true
+    
+  - name: akun6
+    server: www.skillacademy.com
+    port: 443
+    type: vmess
+    uuid: 6bec7132-2d3a-4ecb-9eac-ce91dac733fa
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: id6.xv2ray.net
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: id6.xv2ray.net
+    udp: true
