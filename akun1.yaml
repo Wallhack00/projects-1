@@ -1,103 +1,120 @@
-mode: global
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
 proxies:
   - name: ropi1
-    server: www.skillacademy.com
+    server: layanan.ruangguru.com
     port: 443
     type: vmess
-    uuid: be1cfc70-54ae-11ee-b035-205c6d5f5d78
+    uuid: a7bd02e3-3e90-466a-b9fd-3e6f7b9c6438
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: id-1.0rd.net
+    servername: vmess-bn-id01.globalssh.xyz
     network: ws
     ws-opts:
-      path: /xp4fuiga
+      path: /vmess-ws
       headers:
-        Host: id-1.0rd.net
+        Host: vmess-bn-id01.globalssh.xyz
     udp: true
-    
   - name: ropi2
-    server: www.skillacademy.com
+    server: layanan.ruangguru.com
     port: 443
     type: vmess
-    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
-    alterId: 16
+    uuid: ffe87e5a-b4f2-471c-add7-c0c540ad1cbe
+    alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: idv-3.openv2ray.com
+    servername: vmess-ikd-id01.globalssh.xyz
     network: ws
     ws-opts:
-      path: /opentunnel?user=opentunnel.net-isrofiah
+      path: /vmess-ws
       headers:
-        Host: idv-3.openv2ray.com
+        Host: vmess-ikd-id01.globalssh.xyz
     udp: true
-    
   - name: ropi3
-    server: www.skillacademy.com
+    server: layanan.ruangguru.com
     port: 443
     type: vmess
-    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
-    alterId: 16
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: idv-1.openv2ray.com
-    network: ws
-    ws-opts:
-      path: /opentunnel?user=opentunnel.net-geyong
-      headers:
-        Host: idv-1.openv2ray.com
-    udp: true
-
-  - name: ropi4
-    server: www.skillacademy.com
-    port: 443
-    type: vmess
-    uuid: afff45f1-313a-44ae-8ebe-2edfb3a40614
+    uuid: 42a4390d-1569-4ae7-80da-f55a4794ddfe
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: id2.xv2ray.net
+    servername: vmess-uas-id01.globalssh.xyz
     network: ws
     ws-opts:
-      path: /vmess
+      path: /vmess-ws
       headers:
-        Host: id2.xv2ray.net
+        Host: vmess-uas-id01.globalssh.xyz
     udp: true
-    
-  - name: ropi5
-    server: www.skillacademy.com
-    port: 443
-    type: vmess
-    uuid: 8e49bf13-358b-4e4c-aec9-3c63f6911f31
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id3.xv2ray.net
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: id3.xv2ray.net
-    udp: true
-    
-  - name: ropi6
-    server: www.skillacademy.com
-    port: 443
-    type: vmess
-    uuid: 6bec7132-2d3a-4ecb-9eac-ce91dac733fa
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id6.xv2ray.net
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: id6.xv2ray.net
-    udp: true
+proxy-groups:
+  - name: CLASH
+    type: select
+    proxies:
+      - ropi1
+      - ropi2
+      - ropi3
+      - LOAD-BALANCE
+      - BEST-PING
+      - FALLBACK
+  - name: LOAD-BALANCE
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - ropi1
+      - ropi2
+      - ropi3
+  - name: BEST-PING
+    type: url-test
+    url: http://hi.bonds.id/ping
+    interval: 300
+    tolerance: 50
+    proxies:
+      - ropi1
+      - ropi2
+      - ropi3
+  - name: FALLBACK
+    type: fallback
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - ropi1
+      - ropi2
+      - ropi3
+rules:
+  - MATCH,CLASH
