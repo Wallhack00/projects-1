@@ -1,7 +1,7 @@
 mode: global
 proxies:
-  - name: akun1
-    server: www.skillacademy.com
+  - name: ropi1
+    server: blog.skillacademy.com
     port: 443
     type: vmess
     uuid: be1cfc70-54ae-11ee-b035-205c6d5f5d78
@@ -17,8 +17,8 @@ proxies:
         Host: id-1.0rd.net
     udp: true
     
-  - name: akun2
-    server: www.skillacademy.com
+  - name: ropi2
+    server: blog.skillacademy.com
     port: 443
     type: vmess
     uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
@@ -34,8 +34,8 @@ proxies:
         Host: idv-3.openv2ray.com
     udp: true
     
-  - name: akun3
-    server: www.skillacademy.com
+  - name: ropi3
+    server: blog.skillacademy.com
     port: 443
     type: vmess
     uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
@@ -51,8 +51,8 @@ proxies:
         Host: idv-1.openv2ray.com
     udp: true
 
-  - name: akun4
-    server: www.skillacademy.com
+  - name: ropi4
+    server: blog.skillacademy.com
     port: 443
     type: vmess
     uuid: afff45f1-313a-44ae-8ebe-2edfb3a40614
@@ -68,8 +68,8 @@ proxies:
         Host: id2.xv2ray.net
     udp: true
     
-  - name: akun5
-    server: www.skillacademy.com
+  - name: ropi5
+    server: blog.skillacademy.com
     port: 443
     type: vmess
     uuid: 8e49bf13-358b-4e4c-aec9-3c63f6911f31
@@ -85,8 +85,8 @@ proxies:
         Host: id3.xv2ray.net
     udp: true
     
-  - name: akun6
-    server: www.skillacademy.com
+  - name: ropi6
+    server: blog.skillacademy.com
     port: 443
     type: vmess
     uuid: 6bec7132-2d3a-4ecb-9eac-ce91dac733fa
