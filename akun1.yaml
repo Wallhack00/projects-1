@@ -84,12 +84,12 @@ proxy-groups:
   - name: CLASH
     type: select
     proxies:
-      - ropi1
-      - ropi2
-      - ropi3
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
+      - ropi1
+      - ropi2
+      - ropi3
   - name: LOAD-BALANCE
     type: load-balance
     strategy: consistent-hashing
