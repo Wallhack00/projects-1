@@ -2,7 +2,7 @@ mode: global
 unified-delay: true
 proxies:
   - name: rofi1
-    server: 104.26.6.171
+    server: 104.21.21.104
     port: 443
     type: vmess
     uuid: 8e49bf13-358b-4e4c-aec9-3c63f6911f31
@@ -19,7 +19,7 @@ proxies:
     udp: true
     
   - name: rofi2
-    server: 104.26.6.171
+    server: 104.21.21.104
     port: 443
     type: vmess
     uuid: 6bec7132-2d3a-4ecb-9eac-ce91dac733fa
@@ -36,7 +36,7 @@ proxies:
     udp: true
     
   - name: rofi3
-    server: 104.26.6.171
+    server: 104.21.21.104
     port: 443
     type: vmess
     uuid: 691079cb-a8f0-4a5d-8128-8989a9024991
@@ -53,7 +53,7 @@ proxies:
     udp: true
     
   - name: rofi4
-    server: 104.26.6.171
+    server: 104.21.21.104
     port: 443
     type: vmess
     uuid: 5d16049c-d415-42b9-b8f1-8bb03b1f5a07
@@ -70,7 +70,7 @@ proxies:
     udp: true
     
   - name: rofi5
-    server: 104.26.6.171
+    server: 104.21.21.104
     port: 443
     type: vless
     uuid: d6d76ac8-72ae-4b95-9103-4845093cb785
@@ -86,7 +86,7 @@ proxies:
     udp: true
     
   - name: rofi6
-    server: 104.26.6.171
+    server: 104.21.21.104
     port: 443
     type: vmess
     uuid: 8f661f87-6f61-4283-b17a-ca3cae6add52
@@ -103,7 +103,7 @@ proxies:
     udp: true
     
   - name: rofi7
-    server: 104.26.6.171
+    server: 104.21.21.104
     port: 443
     type: vless
     uuid: 88ef777f-0c43-4e0d-a8e5-e4a081ee7214
