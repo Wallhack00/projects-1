@@ -6,54 +6,6 @@ proxies:
     server: 104.21.21.104
     port: 443
     type: vmess
-    uuid: a7bd02e3-3e90-466a-b9fd-3e6f7b9c6438
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: vmess-bn-id01.globalssh.xyz
-    network: ws
-    ws-opts:
-      path: /vmess-ws
-      headers:
-        Host: vmess-bn-id01.globalssh.xyz
-    udp: true
-  - name: ropi2
-    server: 104.21.21.104
-    port: 443
-    type: vmess
-    uuid: ffe87e5a-b4f2-471c-add7-c0c540ad1cbe
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: vmess-ikd-id01.globalssh.xyz
-    network: ws
-    ws-opts:
-      path: /vmess-ws
-      headers:
-        Host: vmess-ikd-id01.globalssh.xyz
-    udp: true
-  - name: ropi3
-    server: 104.21.21.104
-    port: 443
-    type: vmess
-    uuid: 42a4390d-1569-4ae7-80da-f55a4794ddfe
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: vmess-uas-id01.globalssh.xyz
-    network: ws
-    ws-opts:
-      path: /vmess-ws
-      headers:
-        Host: vmess-uas-id01.globalssh.xyz
-    udp: true
-  - name: ropi4
-    server: 104.21.21.104
-    port: 443
-    type: vmess
     uuid: 097932d6-310f-4b25-901f-8e2d8b1c8fdf
     alterId: 0
     cipher: auto
@@ -66,7 +18,7 @@ proxies:
       headers:
         Host: idmws.mainssh.xyz
     udp: true
-  - name: ropi5
+  - name: ropi2
     server: 104.21.21.104
     port: 443
     type: vless
@@ -81,20 +33,20 @@ proxies:
       headers:
         Host: idlws.mainssh.xyz
     udp: true
-  - name: ropi6
+  - name: ropi3
     server: 104.21.21.104
     port: 443
     type: trojan
     password: mainssh-milowosososfcd
     skip-cert-verify: true
-    sni: ropi6
+    sni: ropi3
     network: ws
     ws-opts:
       path: "%2Ftrojan"
       headers:
-        Host: ropi6
+        Host: ropi3
     udp: true
-  - name: ropi7
+  - name: ropi4
     server: 104.21.21.104
     port: 443
     type: vmess
@@ -110,7 +62,7 @@ proxies:
       headers:
         Host: idray.serverip.my.id
     udp: true
-  - name: ropi8
+  - name: ropi5
     server: 104.21.21.104
     port: 443
     type: vless
@@ -125,7 +77,7 @@ proxies:
       headers:
         Host: idray.serverip.my.id
     udp: true
-  - name: ropi9
+  - name: ropi6
     server: 104.21.21.104
     port: 443
     type: vmess
@@ -141,7 +93,7 @@ proxies:
       headers:
         Host: id1-ray.ipservers.xyz
     udp: true
-  - name: ropi10
+  - name: ropi7
     server: 104.21.21.104
     port: 443
     type: vmess
@@ -171,9 +123,6 @@ proxy-groups:
       - ropi5
       - ropi6
       - ropi7
-      - ropi8
-      - ropi9
-      - ropi10
   - name: LOAD-BALANCE
     type: load-balance
     strategy: consistent-hashing
@@ -187,9 +136,6 @@ proxy-groups:
       - ropi5
       - ropi6
       - ropi7
-      - ropi8
-      - ropi9
-      - ropi10
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
@@ -203,9 +149,6 @@ proxy-groups:
       - ropi5
       - ropi6
       - ropi7
-      - ropi8
-      - ropi9
-      - ropi10
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
@@ -218,8 +161,5 @@ proxy-groups:
       - ropi5
       - ropi6
       - ropi7
-      - ropi8
-      - ropi9
-      - ropi10
 rules:
   - MATCH,CLASH
