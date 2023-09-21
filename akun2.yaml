@@ -1,6 +1,6 @@
 mode: rule
 log-level: warning
-unified-delay: true
+unified-delay: false
 proxies:
   - name: ropi1
     server: layanan.ruangguru.com
