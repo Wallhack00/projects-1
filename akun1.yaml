@@ -1,8 +1,47 @@
 mode: rule
-log-level: warning
-unified-delay: false
+log-level: silent
+unified-delay: false 
 proxies:
   - name: ropi1
+    server: 104.21.21.104
+    port: 443
+    type: trojan
+    password: aaaaaa
+    skip-cert-verify: true
+    sni: trojan-bn-id01.globalssh.xyz
+    network: ws
+    ws-opts:
+      path: "%2Ftrojan-ws"
+      headers:
+        Host: trojan-bn-id01.globalssh.xyz
+    udp: true
+  - name: ropi2
+    server: 104.21.21.104
+    port: 443
+    type: trojan
+    password: aaaaaa
+    skip-cert-verify: true
+    sni: trojan-ikd-id01.globalssh.xyz
+    network: ws
+    ws-opts:
+      path: "%2Ftrojan-ws"
+      headers:
+        Host: trojan-ikd-id01.globalssh.xyz
+    udp: true
+  - name: ropi3
+    server: 104.21.21.104
+    port: 443
+    type: trojan
+    password: aaaaaa
+    skip-cert-verify: true
+    sni: trojan-uas-id01.globalssh.xyz
+    network: ws
+    ws-opts:
+      path: "%2Ftrojan-ws"
+      headers:
+        Host: trojan-uas-id01.globalssh.xyz
+    udp: true
+  - name: ropi4
     server: 104.21.21.104
     port: 443
     type: vmess
@@ -18,7 +57,7 @@ proxies:
       headers:
         Host: idmws.mainssh.xyz
     udp: true
-  - name: ropi2
+  - name: ropi5
     server: 104.21.21.104
     port: 443
     type: vless
@@ -33,81 +72,18 @@ proxies:
       headers:
         Host: idlws.mainssh.xyz
     udp: true
-  - name: ropi3
+  - name: ropi6
     server: 104.21.21.104
     port: 443
     type: trojan
-    password: mainssh-milowosososfcd
+    password: ropi6
     skip-cert-verify: true
-    sni: ropi3
+    sni: idtws.mainssh.xyz
     network: ws
     ws-opts:
       path: "%2Ftrojan"
       headers:
-        Host: ropi3
-    udp: true
-  - name: ropi4
-    server: 104.21.21.104
-    port: 443
-    type: vmess
-    uuid: b38b5dfc-8ebd-4de9-8883-beb07f4d551b
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: idray.serverip.my.id
-    network: ws
-    ws-opts:
-      path: /serverssh.net
-      headers:
-        Host: idray.serverip.my.id
-    udp: true
-  - name: ropi5
-    server: 104.21.21.104
-    port: 443
-    type: vless
-    uuid: 9e370af8-eddf-4670-9ad6-5b1dd58b1f05
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: idray.serverip.my.id
-    network: ws
-    ws-opts:
-      path: "%2Fserverssh"
-      headers:
-        Host: idray.serverip.my.id
-    udp: true
-  - name: ropi6
-    server: 104.21.21.104
-    port: 443
-    type: vmess
-    uuid: de321622-8872-41d2-8c90-4a0f97c4aa45
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id1-ray.ipservers.xyz
-    network: ws
-    ws-opts:
-      path: /JAGOANSSH/
-      headers:
-        Host: id1-ray.ipservers.xyz
-    udp: true
-  - name: ropi7
-    server: 104.21.21.104
-    port: 443
-    type: vmess
-    uuid: 6aa04c83-1b19-43d9-a6b5-67453c2c5e33
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id2-ray.ipservers.xyz
-    network: ws
-    ws-opts:
-      path: /JAGOANSSH/
-      headers:
-        Host: id2-ray.ipservers.xyz
+        Host: idtws.mainssh.xyz
     udp: true
 proxy-groups:
   - name: CLASH
@@ -122,7 +98,6 @@ proxy-groups:
       - ropi4
       - ropi5
       - ropi6
-      - ropi7
   - name: LOAD-BALANCE
     type: load-balance
     strategy: consistent-hashing
@@ -135,7 +110,6 @@ proxy-groups:
       - ropi4
       - ropi5
       - ropi6
-      - ropi7
   - name: BEST-PING
     type: url-test
     url: http://hi.bonds.id/ping
@@ -148,7 +122,6 @@ proxy-groups:
       - ropi4
       - ropi5
       - ropi6
-      - ropi7
   - name: FALLBACK
     type: fallback
     url: http://hi.bonds.id/ping
@@ -160,6 +133,5 @@ proxy-groups:
       - ropi4
       - ropi5
       - ropi6
-      - ropi7
 rules:
   - MATCH,CLASH
