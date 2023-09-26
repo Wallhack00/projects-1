@@ -3,7 +3,7 @@ log-level: silent
 unified-delay: false
 proxies:
   - name: ropi1
-    server: info.udemy.com
+    server: layanan.ruangguru.com
     port: 443
     type: vmess
     uuid: d30a3ed4-4da0-4702-bb2a-ec125950f5ed
@@ -19,7 +19,7 @@ proxies:
         Host: idmws.mainssh.xyz
     udp: true
   - name: ropi2
-    server: info.udemy.com
+    server: layanan.ruangguru.com
     port: 443
     type: vless
     uuid: e6ad17a9-c642-4be2-9035-c3069fa10226
@@ -34,7 +34,7 @@ proxies:
         Host: idlws.mainssh.xyz
     udp: true
   - name: ropi3
-    server: info.udemy.com
+    server: layanan.ruangguru.com
     port: 443
     type: trojan
     password: mainssh-tiigaaa
@@ -47,7 +47,7 @@ proxies:
         Host: idtws.mainssh.xyz
     udp: true
   - name: ropi4
-    server: info.udemy.com
+    server: layanan.ruangguru.com
     port: 443
     type: trojan
     password: aaaaaa
@@ -60,7 +60,7 @@ proxies:
         Host: trojan-bn-id01.globalssh.xyz
     udp: true
   - name: ropi5
-    server: info.udemy.com
+    server: layanan.ruangguru.com
     port: 443
     type: trojan
     password: aaaaaa
@@ -73,7 +73,7 @@ proxies:
         Host: trojan-ikd-id01.globalssh.xyz
     udp: true
   - name: ropi6
-    server: info.udemy.com
+    server: layanan.ruangguru.com
     port: 443
     type: trojan
     password: aaaaaa
