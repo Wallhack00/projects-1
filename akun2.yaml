@@ -1,49 +1,9 @@
 mode: rule
 log-level: silent
-allow-lan: false
 unified-delay: false
 proxies:
   - name: ropi1
-    server: layanan.ruangguru.com
-    port: 443
-    type: trojan
-    password: aaaaaa
-    skip-cert-verify: true
-    sni: trojan-bn-id01.globalssh.xyz
-    network: ws
-    ws-opts:
-      path: "%2Ftrojan-ws"
-      headers:
-        Host: trojan-bn-id01.globalssh.xyz
-    udp: true
-  - name: ropi2
-    server: layanan.ruangguru.com
-    port: 443
-    type: trojan
-    password: aaaaaa
-    skip-cert-verify: true
-    sni: trojan-ikd-id01.globalssh.xyz
-    network: ws
-    ws-opts:
-      path: "%2Ftrojan-ws"
-      headers:
-        Host: trojan-ikd-id01.globalssh.xyz
-    udp: true
-  - name: ropi3
-    server: layanan.ruangguru.com
-    port: 443
-    type: trojan
-    password: aaaaaa
-    skip-cert-verify: true
-    sni: trojan-uas-id01.globalssh.xyz
-    network: ws
-    ws-opts:
-      path: "%2Ftrojan-ws"
-      headers:
-        Host: trojan-uas-id01.globalssh.xyz
-    udp: true
-  - name: ropi4
-    server: layanan.ruangguru.com
+    server: info.udemy.com
     port: 443
     type: vmess
     uuid: d30a3ed4-4da0-4702-bb2a-ec125950f5ed
@@ -58,8 +18,8 @@ proxies:
       headers:
         Host: idmws.mainssh.xyz
     udp: true
-  - name: ropi5
-    server: layanan.ruangguru.com
+  - name: ropi2
+    server: info.udemy.com
     port: 443
     type: vless
     uuid: e6ad17a9-c642-4be2-9035-c3069fa10226
@@ -73,8 +33,8 @@ proxies:
       headers:
         Host: idlws.mainssh.xyz
     udp: true
-  - name: ropi6
-    server: layanan.ruangguru.com
+  - name: ropi3
+    server: info.udemy.com
     port: 443
     type: trojan
     password: mainssh-tiigaaa
@@ -86,8 +46,47 @@ proxies:
       headers:
         Host: idtws.mainssh.xyz
     udp: true
+  - name: ropi4
+    server: info.udemy.com
+    port: 443
+    type: trojan
+    password: aaaaaa
+    skip-cert-verify: true
+    sni: trojan-bn-id01.globalssh.xyz
+    network: ws
+    ws-opts:
+      path: "%2Ftrojan-ws"
+      headers:
+        Host: trojan-bn-id01.globalssh.xyz
+    udp: true
+  - name: ropi5
+    server: info.udemy.com
+    port: 443
+    type: trojan
+    password: aaaaaa
+    skip-cert-verify: true
+    sni: trojan-ikd-id01.globalssh.xyz
+    network: ws
+    ws-opts:
+      path: "%2Ftrojan-ws"
+      headers:
+        Host: trojan-ikd-id01.globalssh.xyz
+    udp: true
+  - name: ropi6
+    server: info.udemy.com
+    port: 443
+    type: trojan
+    password: aaaaaa
+    skip-cert-verify: true
+    sni: trojan-uas-id01.globalssh.xyz
+    network: ws
+    ws-opts:
+      path: "%2Ftrojan-ws"
+      headers:
+        Host: trojan-uas-id01.globalssh.xyz
+    udp: true
 proxy-groups:
-  - name: CLASH
+  - name: SCRIPT2
     type: select
     proxies:
       - LOAD-BALANCE
@@ -102,7 +101,7 @@ proxy-groups:
   - name: LOAD-BALANCE
     type: load-balance
     strategy: consistent-hashing
-    url: http://hi.bonds.id/ping
+    url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - ropi1
@@ -113,7 +112,7 @@ proxy-groups:
       - ropi6
   - name: BEST-PING
     type: url-test
-    url: http://hi.bonds.id/ping
+    url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
@@ -125,7 +124,7 @@ proxy-groups:
       - ropi6
   - name: FALLBACK
     type: fallback
-    url: http://hi.bonds.id/ping
+    url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - ropi1
@@ -135,4 +134,4 @@ proxy-groups:
       - ropi5
       - ropi6
 rules:
-  - MATCH,CLASH
+  - MATCH,SCRIPT2
