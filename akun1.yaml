@@ -86,7 +86,7 @@ proxies:
         Host: trojan-uas-id01.globalssh.xyz
     udp: true
 proxy-groups:
-  - name: SCRIPT1
+  - name: SCRIPT 1
     type: select
     proxies:
       - LOAD-BALANCE
@@ -134,4 +134,4 @@ proxy-groups:
       - ropi5
       - ropi6
 rules:
-  - MATCH,SCRIPT1
+  - MATCH,SCRIPT 1
