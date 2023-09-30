@@ -6,7 +6,7 @@ proxies:
     server: 104.21.21.104
     port: 443
     type: vmess
-    uuid: d30a3ed4-4da0-4702-bb2a-ec125950f5ed
+    uuid: fba7d39d-e94b-45a1-a976-81c2fdb46d46
     alterId: 0
     cipher: auto
     tls: true
@@ -22,7 +22,7 @@ proxies:
     server: 104.21.21.104
     port: 443
     type: vless
-    uuid: e6ad17a9-c642-4be2-9035-c3069fa10226
+    uuid: d9685530-c8c8-44e9-9b9c-7116af4f7a47
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -37,7 +37,7 @@ proxies:
     server: 104.21.21.104
     port: 443
     type: trojan
-    password: mainssh-tiigaaa
+    password: mainssh-isrofiahdwiii
     skip-cert-verify: true
     sni: idtws.mainssh.xyz
     network: ws
