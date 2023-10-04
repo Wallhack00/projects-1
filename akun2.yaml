@@ -3,7 +3,7 @@ log-level: silent
 unified-delay: false
 proxies:
   - name: ropi1
-    server: api.midtrans.com
+    server: 104.26.6.171
     port: 443
     type: vmess
     uuid: fba7d39d-e94b-45a1-a976-81c2fdb46d46
@@ -19,7 +19,7 @@ proxies:
         Host: idmws.mainssh.xyz
     udp: true
   - name: ropi2
-    server: api.midtrans.com
+    server: 104.26.6.171
     port: 443
     type: vless
     uuid: d9685530-c8c8-44e9-9b9c-7116af4f7a47
@@ -34,7 +34,7 @@ proxies:
         Host: idlws.mainssh.xyz
     udp: true
   - name: ropi3
-    server: api.midtrans.com
+    server: 104.26.6.171
     port: 443
     type: trojan
     password: mainssh-isrofiahdwiii
@@ -47,7 +47,7 @@ proxies:
         Host: idtws.mainssh.xyz
     udp: true
   - name: ropi4
-    server: api.midtrans.com
+    server: 104.26.6.171
     port: 443
     type: trojan
     password: aaaaaa
@@ -60,7 +60,7 @@ proxies:
         Host: trojan-bn-id01.globalssh.xyz
     udp: true
   - name: ropi5
-    server: api.midtrans.com
+    server: 104.26.6.171
     port: 443
     type: trojan
     password: aaaaaa
@@ -73,7 +73,7 @@ proxies:
         Host: trojan-ikd-id01.globalssh.xyz
     udp: true
   - name: ropi6
-    server: api.midtrans.com
+    server: 104.26.6.171
     port: 443
     type: trojan
     password: aaaaaa
