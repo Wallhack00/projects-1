@@ -1,5 +1,5 @@
 mode: rule
-log-level: warning
+log-level: silent
 allow-lan: false
 unified-delay: false
 proxies:
