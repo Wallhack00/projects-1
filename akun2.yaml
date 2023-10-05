@@ -4,7 +4,7 @@ allow-lan: false
 unified-delay: false
 proxies:
   - name: keynis1
-    server: ganecadigital.com
+    server: api.midtrans.com
     port: 443
     type: vmess
     uuid: adca0eb7-1f43-4fd2-8177-46860f41e4d8
@@ -20,7 +20,7 @@ proxies:
         Host: idmws.mainssh.xyz
     udp: true
   - name: keynis2
-    server: ganecadigital.com
+    server: api.midtrans.com
     port: 443
     type: vless
     uuid: 5bd4db7e-e2ef-431e-9c49-0a62c8556d6c
@@ -35,7 +35,7 @@ proxies:
         Host: idlws.mainssh.xyz
     udp: true
   - name: keynis3
-    server: ganecadigital.com
+    server: api.midtrans.com
     port: 443
     type: trojan
     password: mainssh-anangrofiii
@@ -48,7 +48,7 @@ proxies:
         Host: idtws.mainssh.xyz
     udp: true
   - name: keynis4
-    server: ganecadigital.com
+    server: api.midtrans.com
     port: 443
     type: trojan
     password: aaaaaa
@@ -61,7 +61,7 @@ proxies:
         Host: trojan-bn-id01.globalssh.xyz
     udp: true
   - name: keynis5
-    server: ganecadigital.com
+    server: api.midtrans.com
     port: 443
     type: trojan
     password: aaaaaa
@@ -74,7 +74,7 @@ proxies:
         Host: trojan-ikd-id01.globalssh.xyz
     udp: true
   - name: keynis6
-    server: ganecadigital.com
+    server: api.midtrans.com
     port: 443
     type: trojan
     password: aaaaaa
