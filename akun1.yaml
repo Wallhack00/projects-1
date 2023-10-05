@@ -38,7 +38,7 @@ proxies:
     server: chat.sociomile.com
     port: 443
     type: trojan
-    password: millow3
+    password: mainssh-anangrofiii
     skip-cert-verify: true
     sni: idtws.mainssh.xyz
     network: ws
