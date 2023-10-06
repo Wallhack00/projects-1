@@ -1,51 +1,78 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
 mode: rule
 log-level: silent
-allow-lan: false
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
 unified-delay: false
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
 proxies:
   - name: millow1
     server: web.udemy.com
     port: 443
     type: vmess
-    uuid: adca0eb7-1f43-4fd2-8177-46860f41e4d8
+    uuid: b43e47c0-641d-11ee-b132-205c6d5f5d78
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: idmws.mainssh.xyz
+    servername: id-1.0rd.net
     network: ws
     ws-opts:
-      path: /vmess
+      path: /3w6pn87b
       headers:
-        Host: idmws.mainssh.xyz
+        Host: id-1.0rd.net
     udp: true
   - name: millow2
     server: web.udemy.com
     port: 443
-    type: vless
-    uuid: 5bd4db7e-e2ef-431e-9c49-0a62c8556d6c
-    cipher: auto
-    tls: true
+    type: trojan
+    password: 26544b50-641d-11ee-882f-1239d0255272
     skip-cert-verify: true
-    servername: idlws.mainssh.xyz
+    sni: id-1.test3.net
     network: ws
     ws-opts:
-      path: /vless
+      path: /howdy
       headers:
-        Host: idlws.mainssh.xyz
+        Host: id-1.test3.net
     udp: true
   - name: millow3
     server: web.udemy.com
     port: 443
     type: trojan
-    password: mainssh-anangrofiii
+    password: jagoanssh-millow1
     skip-cert-verify: true
-    sni: idtws.mainssh.xyz
+    sni: id1go.ipservers.xyz
     network: ws
     ws-opts:
       path: /trojan
       headers:
-        Host: idtws.mainssh.xyz
+        Host: id1go.ipservers.xyz
     udp: true
   - name: millow4
     server: web.udemy.com
