@@ -129,7 +129,7 @@ proxy-groups:
   - name: LOAD-BALANCE
     type: load-balance
     strategy: consistent-hashing
-    url: http://hi.bonds.id/ping
+    url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - millow1
@@ -140,7 +140,7 @@ proxy-groups:
       - millow6
   - name: BEST-PING
     type: url-test
-    url: http://hi.bonds.id/ping
+    url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
@@ -152,7 +152,7 @@ proxy-groups:
       - millow6
   - name: FALLBACK
     type: fallback
-    url: http://hi.bonds.id/ping
+    url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - millow1
