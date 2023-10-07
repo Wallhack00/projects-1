@@ -36,7 +36,7 @@ proxies:
     server: api.midtrans.com
     port: 443
     type: vmess
-    uuid: b43e47c0-641d-11ee-b132-205c6d5f5d78
+    uuid: 943e9760-64ec-11ee-b838-205c6d5f5d78
     alterId: 0
     cipher: auto
     tls: true
@@ -44,7 +44,7 @@ proxies:
     servername: id-1.0rd.net
     network: ws
     ws-opts:
-      path: /3w6pn87b
+      path: /0aj73m69
       headers:
         Host: id-1.0rd.net
     udp: true
