@@ -1,39 +1,10 @@
-port: 7890
-socks-port: 7891
-redir-port: 7892
-mixed-port: 7893
-tproxy-port: 7895
-ipv6: false
-mode: rule
+mode: global
 log-level: silent
 allow-lan: true
-external-controller: 0.0.0.0:9090
-secret: "rofi"
-bind-address: "*"
 unified-delay: false
-profile:
-  store-selected: true
-dns:
-  enable: true
-  ipv6: false
-  enhanced-mode: redir-host
-  listen: 0.0.0.0:7874
-  nameserver:
-    - 8.8.8.8
-    - 1.0.0.1
-    - https://dns.google/dns-query
-  fallback:
-    - 1.1.1.1
-    - 8.8.4.4
-    - https://cloudflare-dns.com/dns-query
-    - 112.215.203.254
-  default-nameserver:
-    - 8.8.8.8
-    - 1.1.1.1
-    - 112.215.203.254
 proxies:
   - name: ropi1
-    server: support.udemy.com
+    server: promo.skillacademy.com
     port: 443
     type: vmess
     uuid: e4076da0-65ca-11ee-b339-205c6d5f5d78
@@ -49,7 +20,7 @@ proxies:
         Host: id-1.0rd.net
     udp: true
   - name: ropi2
-    server: support.udemy.com
+    server: promo.skillacademy.com
     port: 443
     type: vmess
     uuid: adca0eb7-1f43-4fd2-8177-46860f41e4d8
@@ -65,7 +36,7 @@ proxies:
         Host: idmws.mainssh.xyz
     udp: true
   - name: ropi3
-    server: support.udemy.com
+    server: promo.skillacademy.com
     port: 443
     type: vless
     uuid: 5bd4db7e-e2ef-431e-9c49-0a62c8556d6c
@@ -80,7 +51,7 @@ proxies:
         Host: idlws.mainssh.xyz
     udp: true
   - name: ropi4
-    server: support.udemy.com
+    server: promo.skillacademy.com
     port: 443
     type: trojan
     password: ropi4
@@ -93,7 +64,7 @@ proxies:
         Host: idtws.mainssh.xyz
     udp: true
   - name: ropi5
-    server: support.udemy.com
+    server: promo.skillacademy.com
     port: 443
     type: trojan
     password: aaaaaa
@@ -106,7 +77,7 @@ proxies:
         Host: trojan-bn-id01.globalssh.xyz
     udp: true
   - name: ropi6
-    server: support.udemy.com
+    server: promo.skillacademy.com
     port: 443
     type: trojan
     password: aaaaaa
@@ -119,7 +90,7 @@ proxies:
         Host: trojan-ikd-id01.globalssh.xyz
     udp: true
   - name: ropi7
-    server: support.udemy.com
+    server: promo.skillacademy.com
     port: 443
     type: trojan
     password: aaaaaa
@@ -131,57 +102,3 @@ proxies:
       headers:
         Host: trojan-uas-id01.globalssh.xyz
     udp: true
-proxy-groups:
-  - name: CLASH
-    type: select
-    proxies:
-      - LOAD-BALANCE
-      - BEST-PING
-      - FALLBACK
-      - ropi1
-      - ropi2
-      - ropi3
-      - ropi4
-      - ropi5
-      - ropi6
-      - ropi7
-  - name: LOAD-BALANCE
-    type: load-balance
-    strategy: consistent-hashing
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-      - ropi1
-      - ropi2
-      - ropi3
-      - ropi4
-      - ropi5
-      - ropi6
-      - ropi7
-  - name: BEST-PING
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - ropi1
-      - ropi2
-      - ropi3
-      - ropi4
-      - ropi5
-      - ropi6
-      - ropi7
-  - name: FALLBACK
-    type: fallback
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-      - ropi1
-      - ropi2
-      - ropi3
-      - ropi4
-      - ropi5
-      - ropi6
-      - ropi7
-rules:
-  - MATCH,CLASH
