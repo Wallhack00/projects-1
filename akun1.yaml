@@ -8,7 +8,7 @@ mode: rule
 log-level: silent
 allow-lan: true
 external-controller: 0.0.0.0:9090
-secret: ""
+secret: "rofi"
 bind-address: "*"
 unified-delay: false
 profile:
@@ -32,11 +32,11 @@ dns:
     - 1.1.1.1
     - 112.215.203.254
 proxies:
-  - name: millow1
-    server: web.udemy.com
+  - name: ropi1
+    server: 104.21.21.104
     port: 443
     type: vmess
-    uuid: 943e9760-64ec-11ee-b838-205c6d5f5d78
+    uuid: e4076da0-65ca-11ee-b339-205c6d5f5d78
     alterId: 0
     cipher: auto
     tls: true
@@ -44,38 +44,56 @@ proxies:
     servername: id-1.0rd.net
     network: ws
     ws-opts:
-      path: /0aj73m69
+      path: /vdyzjnmc
       headers:
         Host: id-1.0rd.net
     udp: true
-  - name: millow2
-    server: web.udemy.com
+  - name: ropi2
+    server: 104.21.21.104
     port: 443
-    type: trojan
-    password: 26544b50-641d-11ee-882f-1239d0255272
+    type: vmess
+    uuid: adca0eb7-1f43-4fd2-8177-46860f41e4d8
+    alterId: 0
+    cipher: auto
+    tls: true
     skip-cert-verify: true
-    sni: id-1.test3.net
+    servername: idmws.mainssh.xyz
     network: ws
     ws-opts:
-      path: /howdy
+      path: /vmess
       headers:
-        Host: id-1.test3.net
+        Host: idmws.mainssh.xyz
     udp: true
-  - name: millow3
-    server: web.udemy.com
+  - name: ropi3
+    server: 104.21.21.104
+    port: 443
+    type: vless
+    uuid: 5bd4db7e-e2ef-431e-9c49-0a62c8556d6c
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: idlws.mainssh.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: idlws.mainssh.xyz
+    udp: true
+  - name: ropi4
+    server: 104.21.21.104
     port: 443
     type: trojan
-    password: jagoanssh-millow1
+    password: ropi4
     skip-cert-verify: true
-    sni: id1go.ipservers.xyz
+    sni: idtws.mainssh.xyz
     network: ws
     ws-opts:
       path: /trojan
       headers:
-        Host: id1go.ipservers.xyz
+        Host: idtws.mainssh.xyz
     udp: true
-  - name: millow4
-    server: web.udemy.com
+  - name: ropi5
+    server: 104.21.21.104
     port: 443
     type: trojan
     password: aaaaaa
@@ -87,8 +105,8 @@ proxies:
       headers:
         Host: trojan-bn-id01.globalssh.xyz
     udp: true
-  - name: millow5
-    server: web.udemy.com
+  - name: ropi6
+    server: 104.21.21.104
     port: 443
     type: trojan
     password: aaaaaa
@@ -100,8 +118,8 @@ proxies:
       headers:
         Host: trojan-ikd-id01.globalssh.xyz
     udp: true
-  - name: millow6
-    server: web.udemy.com
+  - name: ropi7
+    server: 104.21.21.104
     port: 443
     type: trojan
     password: aaaaaa
@@ -120,46 +138,50 @@ proxy-groups:
       - LOAD-BALANCE
       - BEST-PING
       - FALLBACK
-      - millow1
-      - millow2
-      - millow3
-      - millow4
-      - millow5
-      - millow6
+      - ropi1
+      - ropi2
+      - ropi3
+      - ropi4
+      - ropi5
+      - ropi6
+      - ropi7
   - name: LOAD-BALANCE
     type: load-balance
     strategy: consistent-hashing
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - millow1
-      - millow2
-      - millow3
-      - millow4
-      - millow5
-      - millow6
+      - ropi1
+      - ropi2
+      - ropi3
+      - ropi4
+      - ropi5
+      - ropi6
+      - ropi7
   - name: BEST-PING
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - millow1
-      - millow2
-      - millow3
-      - millow4
-      - millow5
-      - millow6
+      - ropi1
+      - ropi2
+      - ropi3
+      - ropi4
+      - ropi5
+      - ropi6
+      - ropi7
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - millow1
-      - millow2
-      - millow3
-      - millow4
-      - millow5
-      - millow6
+      - ropi1
+      - ropi2
+      - ropi3
+      - ropi4
+      - ropi5
+      - ropi6
+      - ropi7
 rules:
   - MATCH,CLASH
