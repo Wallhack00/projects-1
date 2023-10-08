@@ -4,7 +4,7 @@ allow-lan: true
 unified-delay: false
 proxies:
   - name: ropi1
-    server: 104.21.21.104
+    server: layanan.ruangguru.com
     port: 443
     type: vmess
     uuid: e4076da0-65ca-11ee-b339-205c6d5f5d78
@@ -20,7 +20,7 @@ proxies:
         Host: id-1.0rd.net
     udp: true
   - name: ropi2
-    server: 104.21.21.104
+    server: layanan.ruangguru.com
     port: 443
     type: vmess
     uuid: adca0eb7-1f43-4fd2-8177-46860f41e4d8
@@ -36,7 +36,7 @@ proxies:
         Host: idmws.mainssh.xyz
     udp: true
   - name: ropi3
-    server: 104.21.21.104
+    server: layanan.ruangguru.com
     port: 443
     type: vless
     uuid: 5bd4db7e-e2ef-431e-9c49-0a62c8556d6c
@@ -51,7 +51,7 @@ proxies:
         Host: idlws.mainssh.xyz
     udp: true
   - name: ropi4
-    server: 104.21.21.104
+    server: layanan.ruangguru.com
     port: 443
     type: trojan
     password: ropi4
@@ -64,7 +64,7 @@ proxies:
         Host: idtws.mainssh.xyz
     udp: true
   - name: ropi5
-    server: 104.21.21.104
+    server: layanan.ruangguru.com
     port: 443
     type: trojan
     password: aaaaaa
@@ -77,7 +77,7 @@ proxies:
         Host: trojan-bn-id01.globalssh.xyz
     udp: true
   - name: ropi6
-    server: 104.21.21.104
+    server: layanan.ruangguru.com
     port: 443
     type: trojan
     password: aaaaaa
@@ -90,7 +90,7 @@ proxies:
         Host: trojan-ikd-id01.globalssh.xyz
     udp: true
   - name: ropi7
-    server: 104.21.21.104
+    server: layanan.ruangguru.com
     port: 443
     type: trojan
     password: aaaaaa
