@@ -1,6 +1,6 @@
 mode: global
 log-level: silent
-allow-lan: true
+allow-lan: false
 unified-delay: false
 proxies:
   - name: rofi1
