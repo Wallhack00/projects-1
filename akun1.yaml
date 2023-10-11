@@ -7,7 +7,7 @@ proxies:
     server: support.udemy.com
     port: 443
     type: vmess
-    uuid: 55e38920-66b9-11ee-b238-205c6d5f5d78
+    uuid: 0064ccf0-6837-11ee-b238-205c6d5f5d78
     alterId: 0
     cipher: auto
     tls: true
@@ -15,7 +15,7 @@ proxies:
     servername: id-1.0rd.net
     network: ws
     ws-opts:
-      path: /owuiag0z
+      path: /k807z6xe
       headers:
         Host: id-1.0rd.net
     udp: true
