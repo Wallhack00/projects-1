@@ -5,26 +5,6 @@ allow-lan: false
 secret: ""
 bind-address: "*"
 unified-delay: false
-profile:
-  store-selected: true
-dns:
-  enable: false
-  ipv6: false
-  enhanced-mode: redir-host
-  listen: 0.0.0.0:7874
-  nameserver:
-    - 8.8.8.8
-    - 1.0.0.1
-    - https://dns.google/dns-query
-  fallback:
-    - 1.1.1.1
-    - 8.8.4.4
-    - https://cloudflare-dns.com/dns-query
-    - 112.215.203.254
-  default-nameserver:
-    - 8.8.8.8
-    - 1.1.1.1
-    - 112.215.203.254
 proxies:
   - name: ropi1
     server: promo.skillacademy.com
