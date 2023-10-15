@@ -1,15 +1,9 @@
-
-ipv6: false
 mode: rule
 log-level: silent
-allow-lan: false
-external-controller: 0.0.0.0:9090
-secret: ""
-bind-address: "*"
 unified-delay: false
 proxies:
   - name: ropi1
-    server: www.skillacademy.com
+    server: support.udemy.com
     port: 443
     type: vmess
     uuid: d61e4adc-7abe-4d1e-addc-77987d3c9e24
@@ -25,7 +19,7 @@ proxies:
         Host: idmws.mainssh.xyz
     udp: true
   - name: ropi2
-    server: www.skillacademy.com
+    server: support.udemy.com
     port: 443
     type: vless
     uuid: 97658942-8280-470c-9066-1063333c267f
@@ -40,7 +34,7 @@ proxies:
         Host: idlws.mainssh.xyz
     udp: true
   - name: ropi3
-    server: www.skillacademy.com
+    server: support.udemy.com
     port: 443
     type: trojan
     password: mainssh-rofiiiianang
@@ -53,7 +47,7 @@ proxies:
         Host: idtws.mainssh.xyz
     udp: true
   - name: ropi4
-    server: www.skillacademy.com
+    server: support.udemy.com
     port: 443
     type: trojan
     password: aaaaaa
@@ -66,7 +60,7 @@ proxies:
         Host: trojan-bn-id01.globalssh.xyz
     udp: true
   - name: ropi5
-    server: www.skillacademy.com
+    server: support.udemy.com
     port: 443
     type: trojan
     password: aaaaaa
@@ -79,7 +73,7 @@ proxies:
         Host: trojan-ikd-id01.globalssh.xyz
     udp: true
   - name: ropi6
-    server: www.skillacademy.com
+    server: support.udemy.com
     port: 443
     type: trojan
     password: aaaaaa
