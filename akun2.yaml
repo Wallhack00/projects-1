@@ -33,7 +33,7 @@ dns:
     - 112.215.203.254
 proxies:
   - name: ropi1
-    server: www.skillacademy.com
+    server: promo.skillacademy.com
     port: 443
     type: vmess
     uuid: cf900220-6b0d-11ee-b630-205c6d5f5d78
@@ -50,7 +50,7 @@ proxies:
     udp: true
     
   - name: ropi2
-    server: www.skillacademy.com
+    server: promo.skillacademy.com
     port: 443
     type: trojan
     password: 20a2f2f0-6b0e-11ee-88ce-1239d0255272
