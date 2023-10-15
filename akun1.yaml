@@ -1,68 +1,42 @@
-mode: global
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
 log-level: silent
 allow-lan: false
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
 unified-delay: false
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
 proxies:
-  - name: rofi1
-    server: support.udemy.com
+  - name: ropi1
+    server: www.skillacademy.com
     port: 443
     type: vmess
-    uuid: 9b047300-6989-11ee-b134-205c6d5f5d78
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id-1.0rd.net
-    network: ws
-    ws-opts:
-      path: /rdwm4b57
-      headers:
-        Host: id-1.0rd.net
-    udp: true
-  - name: rofi2
-    server: support.udemy.com
-    port: 443
-    type: trojan
-    password: aaaaaa
-    skip-cert-verify: true
-    sni: trojan-bn-id01.globalssh.xyz
-    network: ws
-    ws-opts:
-      path: /trojan-ws
-      headers:
-        Host: trojan-bn-id01.globalssh.xyz
-    udp: true
-  - name: rofi3
-    server: support.udemy.com
-    port: 443
-    type: trojan
-    password: aaaaaa
-    skip-cert-verify: true
-    sni: trojan-ikd-id01.globalssh.xyz
-    network: ws
-    ws-opts:
-      path: /trojan-ws
-      headers:
-        Host: trojan-ikd-id01.globalssh.xyz
-    udp: true
-  - name: rofi4
-    server: support.udemy.com
-    port: 443
-    type: trojan
-    password: aaaaaa
-    skip-cert-verify: true
-    sni: trojan-uas-id01.globalssh.xyz
-    network: ws
-    ws-opts:
-      path: /trojan-ws
-      headers:
-        Host: trojan-uas-id01.globalssh.xyz
-    udp: true
-  - name: rofi5
-    server: support.udemy.com
-    port: 443
-    type: vmess
-    uuid: 02264f0d-f17b-4dd4-a10d-ff21c17ca1dc
+    uuid: d61e4adc-7abe-4d1e-addc-77987d3c9e24
     alterId: 0
     cipher: auto
     tls: true
@@ -74,11 +48,11 @@ proxies:
       headers:
         Host: idmws.mainssh.xyz
     udp: true
-  - name: rofi6
-    server: support.udemy.com
+  - name: ropi2
+    server: www.skillacademy.com
     port: 443
     type: vless
-    uuid: ad0716fa-ad3e-4fe9-afa7-663f24a268aa
+    uuid: 97658942-8280-470c-9066-1063333c267f
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -89,11 +63,11 @@ proxies:
       headers:
         Host: idlws.mainssh.xyz
     udp: true
-  - name: rofi7
-    server: support.udemy.com
+  - name: ropi3
+    server: www.skillacademy.com
     port: 443
     type: trojan
-    password: mainssh-isrofiahdwiii
+    password: mainssh-rofiiiianang
     skip-cert-verify: true
     sni: idtws.mainssh.xyz
     network: ws
@@ -102,3 +76,67 @@ proxies:
       headers:
         Host: idtws.mainssh.xyz
     udp: true
+  - name: ropi4
+    server: www.skillacademy.com
+    port: 443
+    type: trojan
+    password: aaaaaa
+    skip-cert-verify: true
+    sni: trojan-bn-id01.globalssh.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: trojan-bn-id01.globalssh.xyz
+    udp: true
+  - name: ropi5
+    server: www.skillacademy.com
+    port: 443
+    type: trojan
+    password: aaaaaa
+    skip-cert-verify: true
+    sni: trojan-ikd-id01.globalssh.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: trojan-ikd-id01.globalssh.xyz
+    udp: true
+  - name: ropi6
+    server: www.skillacademy.com
+    port: 443
+    type: trojan
+    password: aaaaaa
+    skip-cert-verify: true
+    sni: trojan-uas-id01.globalssh.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: trojan-uas-id01.globalssh.xyz
+    udp: true
+proxy-groups:
+  - name: CLASH
+    type: select
+    proxies:
+      - LOAD-BALANCE
+      - ropi1
+      - ropi2
+      - ropi3
+      - ropi4
+      - ropi5
+      - ropi6
+  - name: LOAD-BALANCE
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - ropi1
+      - ropi2
+      - ropi3
+      - ropi4
+      - ropi5
+      - ropi6
+rules:
+  - MATCH,CLASH
