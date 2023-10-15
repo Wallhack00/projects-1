@@ -2,8 +2,6 @@ ipv6: false
 mode: rule
 log-level: silent
 allow-lan: false
-secret: ""
-bind-address: "*"
 unified-delay: false
 proxies:
   - name: ropi1
