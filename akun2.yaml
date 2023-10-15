@@ -1,7 +1,5 @@
-ipv6: false
 mode: rule
 log-level: silent
-allow-lan: false
 unified-delay: false
 proxies:
   - name: ropi1
