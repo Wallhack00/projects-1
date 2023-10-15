@@ -8,7 +8,7 @@ unified-delay: false
 profile:
   store-selected: true
 dns:
-  enable: true
+  enable: false
   ipv6: false
   enhanced-mode: redir-host
   listen: 0.0.0.0:7874
