@@ -1,89 +1,80 @@
 mode: rule
 log-level: silent
+allow-lan: false
 unified-delay: false
 proxies:
   - name: ropi1
-    server: support.udemy.com
+    server: 104.17.3.81
     port: 443
     type: vmess
-    uuid: d61e4adc-7abe-4d1e-addc-77987d3c9e24
+    uuid: 513eafc0-7552-11ee-b735-205c6d5f5d78
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: idmws.mainssh.xyz
+    servername: id-1.0rd.net
     network: ws
     ws-opts:
-      path: /vmess
+      path: /97oqrmb4
       headers:
-        Host: idmws.mainssh.xyz
+        Host: id-1.0rd.net
     udp: true
   - name: ropi2
-    server: support.udemy.com
+    server: 104.17.3.81
     port: 443
-    type: vless
-    uuid: 97658942-8280-470c-9066-1063333c267f
+    type: trojan
+    password: 773412b0-7552-11ee-97fa-1239d0255272
+    skip-cert-verify: true
+    sni: id-1.test3.net
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: id-1.test3.net
+    udp: true
+  - name: ropi3
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: 65a31789-b6cb-4f13-8844-cf890f432123
+    alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: idlws.mainssh.xyz
+    servername: id1.kitu.xyz
     network: ws
     ws-opts:
-      path: /vless
+      path: /vmess-ws/
       headers:
-        Host: idlws.mainssh.xyz
-    udp: true
-  - name: ropi3
-    server: support.udemy.com
-    port: 443
-    type: trojan
-    password: mainssh-rofiiiianang
-    skip-cert-verify: true
-    sni: idtws.mainssh.xyz
-    network: ws
-    ws-opts:
-      path: /trojan
-      headers:
-        Host: idtws.mainssh.xyz
+        Host: id1.kitu.xyz
     udp: true
   - name: ropi4
-    server: support.udemy.com
+    server: 104.17.3.81
     port: 443
-    type: trojan
-    password: aaaaaa
+    type: vless
+    uuid: 1eb04ce6-0cd2-4158-854e-9ad46d4c8df7
+    cipher: auto
+    tls: true
     skip-cert-verify: true
-    sni: trojan-bn-id01.globalssh.xyz
+    servername: id1.kitu.xyz
     network: ws
     ws-opts:
-      path: /trojan-ws
+      path: /vless-ws/
       headers:
-        Host: trojan-bn-id01.globalssh.xyz
+        Host: id1.kitu.xyz
     udp: true
   - name: ropi5
-    server: support.udemy.com
+    server: 104.17.3.81
     port: 443
     type: trojan
-    password: aaaaaa
+    password: bde4c4f1-cbc1-42ee-b1bb-34f3a02f4afc
     skip-cert-verify: true
-    sni: trojan-ikd-id01.globalssh.xyz
+    sni: id1.kitu.xyz
     network: ws
     ws-opts:
-      path: /trojan-ws
+      path: /trojan-ws/
       headers:
-        Host: trojan-ikd-id01.globalssh.xyz
-    udp: true
-  - name: ropi6
-    server: support.udemy.com
-    port: 443
-    type: trojan
-    password: aaaaaa
-    skip-cert-verify: true
-    sni: trojan-uas-id01.globalssh.xyz
-    network: ws
-    ws-opts:
-      path: /trojan-ws
-      headers:
-        Host: trojan-uas-id01.globalssh.xyz
+        Host: id1.kitu.xyz
     udp: true
 proxy-groups:
   - name: CLASH
@@ -95,7 +86,6 @@ proxy-groups:
       - ropi3
       - ropi4
       - ropi5
-      - ropi6
   - name: LOAD-BALANCE
     type: load-balance
     strategy: consistent-hashing
@@ -107,6 +97,5 @@ proxy-groups:
       - ropi3
       - ropi4
       - ropi5
-      - ropi6
 rules:
   - MATCH,CLASH
