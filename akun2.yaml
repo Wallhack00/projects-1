@@ -1,10 +1,10 @@
 mode: rule
 proxies:
   - name: ropi1
-    server: 104.18.2.2
+    server: 104.17.3.81
     port: 443
     type: vmess
-    uuid: fa388a80-6cbc-11ee-b133-205c6d5f5d78
+    uuid: 513eafc0-7552-11ee-b735-205c6d5f5d78
     alterId: 0
     cipher: auto
     tls: true
@@ -12,16 +12,15 @@ proxies:
     servername: id-1.0rd.net
     network: ws
     ws-opts:
-      path: /l4gwxiy5
+      path: /97oqrmb4
       headers:
         Host: id-1.0rd.net
     udp: true
-    
   - name: ropi2
-    server: 104.18.2.2
+    server: 104.17.3.81
     port: 443
     type: trojan
-    password: 20a2f2f0-6b0e-11ee-88ce-1239d0255272
+    password: 773412b0-7552-11ee-97fa-1239d0255272
     skip-cert-verify: true
     sni: id-1.test3.net
     network: ws
